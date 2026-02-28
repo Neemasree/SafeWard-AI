@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# 🏥 SafeWard AI
+> **Intelligent Room-Level Visitor Access Control System**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SafeWard AI is a next-generation hospital security solution designed to protect patient privacy and safety through autonomous room-level access monitoring. Built during the Hackathon, it combines real-time occupancy tracking, policy-driven AI verification, and enterprise-grade security analytics.
 
-## Available Scripts
+![SafeWard AI Banner](https://img.shields.io/badge/Security-Advanced-blue?style=for-the-badge&logo=react)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Recharts](https://img.shields.io/badge/Recharts-Data_Viz-FF6384?style=for-the-badge)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 The Vision
+In high-pressure hospital environments, traditional logbooks are insufficient. SafeWard AI introduces **Room-Level Intelligence** to ensure that only authorized caregivers and approved visitors enter patient zones, while strictly enforcing safety protocols like Night Mode and maximum occupancy.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Key Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🔐 1. Smart AI-Face Verification Terminal
+*   **Context-Aware Scans:** AI logic dynamically adapts to active site policies.
+*   **Access Rejections:** Automatically blocks unauthorized individuals or those violating current room policies.
+*   **Visual Feedback:** Instant UI response (Access Granted/Denied) with biometric simulation.
 
-### `npm test`
+### 🌓 2. Autonomous Policy Engine
+*   **Day Mode:** Standard visitor rules with a 4-person occupancy limit.
+*   **Night Mode:** High-security state that **automatically blocks all visitor attempts**, allowing only registered caregivers.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📊 3. Enterprise Security Analytics
+*   **Live Dashboard:** Real-time monitoring of room occupancy, caregiver count, and visitor activity.
+*   **Authorization Breakdown:** Pie charts visualizing the distribution of authorized vs. blocked entries.
+*   **Defense Trajectory:** Time-series Bar charts tracking unauthorized access attempts to identify peak security risks.
 
-### `npm run build`
+### 📝 4. Real-time Security Event Stream
+*   **Precision Logging:** Every system event—from policy shifts to biometrics failures—is logged with sub-second timestamps.
+*   **Exit Tracking:** Full facility entry/exit simulation to maintain 100% occupancy accuracy.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Built With
+- **Frontend:** React 18, React Router DOM (v6)
+- **State Management:** React Context API (Global App State)
+- **Styling:** Premium Glassmorphism UI, Custom CSS, Bootstrap 5, Bootstrap Icons
+- **Analytics:** Recharts (Advanced Data Visualization)
+- **Animations:** CSS3 Keyframe Animations (SlideUp, Pulse, Scanning Effects)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🏃‍♂️ Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
+- Node.js (v16 or higher)
+- npm
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Neemasree/SafeWard-AI.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd SafeWard-AI
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+5. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📸 Presentation Script for Judges
+1.  **Safety First:** Register a caregiver and a visitor; watch the dashboard update in real-time.
+2.  **Night Watch:** Toggle **Night Mode**. Attempt a simulated scan—watch the AI block the visitor and log it as a security event.
+3.  **Analytics:** Scroll down to view the **Security Intelligence** graphs, proving the system is collecting actionable data on security threats.
+4.  **Crowd Control:** Simulate entries until occupancy hits **4/4**. Attempt one more entry—the system will block it based on capacity limits.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Developed with ❤️ for the Hackathon by **Neema Sree**.
