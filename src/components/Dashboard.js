@@ -157,8 +157,8 @@ function Dashboard() {
                                 )}
                             </div>
 
-                            <h4 className="mb-2 brand-font">Terminal Simulation Phase</h4>
-                            <p className="text-muted mb-4 small" style={{ maxWidth: '350px' }}>Simulate a camera detecting a face at the room entrance. AI will check identity, current occupancy, and active policy modes.</p>
+                            <h4 className="mb-2 brand-font">Security Interface Terminal</h4>
+                            <p className="text-muted mb-4 small" style={{ maxWidth: '350px' }}>Initiate biometric verification to validate entry against active room safety protocols and occupancy thresholds.</p>
 
                             <button
                                 onClick={handleSimulateScan}
@@ -169,7 +169,7 @@ function Dashboard() {
                                 {isScanning ? (
                                     <span><span className="spinner-border spinner-border-sm me-2"></span> Analyzing Biometrics...</span>
                                 ) : (
-                                    <span><i className="bi bi-camera-video-fill me-2"></i> Simulate Face Scan Entry</span>
+                                    <span><i className="bi bi-camera-video-fill me-2"></i> Initiate Biometric Scan</span>
                                 )}
                             </button>
 
@@ -182,7 +182,7 @@ function Dashboard() {
                                 className={`btn btn-outline-secondary w-100 mt-3 py-2 fw-bold text-uppercase`}
                                 style={{ maxWidth: '350px', letterSpacing: '2px' }}
                             >
-                                <i className="bi bi-box-arrow-right me-2"></i> Simulate Person Exiting
+                                <i className="bi bi-box-arrow-right me-2"></i> Log Departure Event
                             </button>
 
                             {/* Result Overlay */}
@@ -190,8 +190,8 @@ function Dashboard() {
                                 <div className={`alert ${scanResult === 'Authorized' ? 'alert-success border-success' : 'alert-danger border-danger'} mt-4 w-100 mb-0 fade show animate-slide-up d-flex align-items-center`} style={{ maxWidth: '350px', background: scanResult === 'Authorized' ? 'rgba(16, 185, 129, 0.1)' : 'rgba(239, 68, 68, 0.1)' }}>
                                     <i className={`fs-3 me-3 ${scanResult === 'Authorized' ? 'bi bi-unlock-fill text-success' : 'bi bi-lock-fill text-danger'}`}></i>
                                     <div className="text-start">
-                                        <h6 className={`fw-bold mb-0 ${scanResult === 'Authorized' ? 'text-success' : 'text-danger'}`}>{scanResult === 'Authorized' ? 'ACCESS GRANTED' : 'ACCESS DENIED'}</h6>
-                                        <small className={scanResult === 'Authorized' ? 'text-success' : 'text-danger'}>Door mechanism locked</small>
+                                        <h6 className={`fw-bold mb-0 ${scanResult === 'Authorized' ? 'text-success' : 'text-danger'}`}>{scanResult === 'Authorized' ? 'IDENTITY VERIFIED: ACCESS GRANTED' : 'ACCESS DENIED: SECURITY VIOLATION'}</h6>
+                                        <small className={scanResult === 'Authorized' ? 'text-success' : 'text-danger'}>Terminal Locking Mechanism Released</small>
                                     </div>
                                 </div>
                             )}

@@ -9,13 +9,13 @@ export const AppProvider = ({ children }) => {
     const [occupancy, setOccupancy] = useState(0);
     const [policyMode, setPolicyMode] = useState('DAY'); // 'DAY' or 'NIGHT'
     const [activityLogs, setActivityLogs] = useState([
-        { time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }), event: "System Initialized - SafeWard AI Active", type: "info" }
+        { time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }), event: "Secure Protocol Initialized: SafeWard AI Systems Online", type: "info" }
     ]);
 
     const addCaregiver = (caregiver) => {
         setCaregivers(prev => [...prev, caregiver]);
         setOccupancy(prev => prev + 1);
-        addLog(`Caregiver Registered: ${caregiver.caregiverName}`, "success");
+        addLog(`Personnel Registration Confirmed: ${caregiver.caregiverName}`, "success");
     };
 
     const addVisitor = (visitor) => {
@@ -25,13 +25,13 @@ export const AppProvider = ({ children }) => {
         }
         setVisitors(prev => [...prev, newVisitor]);
         setOccupancy(prev => prev + 1);
-        addLog(`Visitor Approved: ${visitor.visitorName} (Expires 24hrs)`, "success");
+        addLog(`Visitor Clearance Issued: ${visitor.visitorName} (24h Validity)`, "success");
     };
 
     const togglePolicyMode = () => {
         setPolicyMode(prev => {
             const newMode = prev === 'DAY' ? 'NIGHT' : 'DAY';
-            addLog(`System Policy Switched to ${newMode} MODE`, "warning");
+            addLog(`Security Alert: System Policy Transitioned to ${newMode} SHIFT`, "warning");
             return newMode;
         });
     };
@@ -50,7 +50,7 @@ export const AppProvider = ({ children }) => {
 
     const simulateFaceScan = () => {
         if (occupancy >= 4) {
-            addLog("Unauthorized Attempt - Room Full (Capacity 4/4)", "danger");
+            addLog("Access Denied: Maximum Room Occupancy Protocol Enforced (4/4)", "danger");
             setStats(prev => ({ ...prev, blockedAttempts: prev.blockedAttempts + 1 }));
             return "Unauthorized";
         }
@@ -61,11 +61,11 @@ export const AppProvider = ({ children }) => {
 
             if (simulationScannedType === "Visitor") {
                 // 🎯 EXPLICIT REQUEST IMPLEMENTED: Strict policy block for Visitors
-                addLog("Visitor blocked due to Night Policy", "danger");
+                addLog("Access Denied: Visitor Clearance Restricted under Night Protocol", "danger");
                 setStats(prev => ({ ...prev, blockedAttempts: prev.blockedAttempts + 1 }));
                 return "Unauthorized";
             } else {
-                addLog("Caregiver Entry - Authorized (Night Mode)", "success");
+                addLog("Verified Personnel Entry: Authorized under Night Protocol", "success");
                 setStats(prev => ({ ...prev, entriesCaregiver: prev.entriesCaregiver + 1 }));
                 setOccupancy(prev => prev + 1); // Realistically increase occupancy
                 return "Authorized";
@@ -75,13 +75,13 @@ export const AppProvider = ({ children }) => {
             const isKnown = Math.random() > 0.2; // 80% chance recognized
             if (isKnown) {
                 const type = Math.random() > 0.5 ? "Caregiver" : "Visitor";
-                addLog(`${type} Entry - Authorized`, "success");
+                addLog(`Identity Verified: Access Granted for ${type}`, "success");
                 setOccupancy(prev => prev + 1); // Realistically increase occupancy
                 if (type === "Caregiver") setStats(prev => ({ ...prev, entriesCaregiver: prev.entriesCaregiver + 1 }));
                 else setStats(prev => ({ ...prev, entriesVisitor: prev.entriesVisitor + 1 }));
                 return "Authorized";
             } else {
-                addLog("Unknown Person - Unauthorized Attempt", "danger");
+                addLog("Security Breach Warning: Unidentified Individual Detected", "danger");
                 setStats(prev => ({ ...prev, blockedAttempts: prev.blockedAttempts + 1 }));
                 return "Unauthorized";
             }
@@ -92,7 +92,7 @@ export const AppProvider = ({ children }) => {
         if (occupancy <= 0) return false;
 
         const type = Math.random() > 0.5 ? "Caregiver" : "Visitor";
-        addLog(`${type} Exited Facility`, "info");
+        addLog(`Personnel Logistics: ${type} Departure Recorded`, "info");
         setOccupancy(prev => prev - 1);
         return true;
     };

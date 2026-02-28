@@ -22,7 +22,7 @@ function Register() {
         const formEl = e.target;
         const btn = formEl.querySelector('button[type="submit"]');
         const originalText = btn.innerHTML;
-        btn.innerHTML = '<i class="bi bi-check-circle-fill me-2"></i>Registered Successfully';
+        btn.innerHTML = '<i class="bi bi-check-circle-fill me-2"></i>Record Secured Successfully';
         btn.classList.add('btn-premium-success');
         btn.classList.remove('btn-premium');
 

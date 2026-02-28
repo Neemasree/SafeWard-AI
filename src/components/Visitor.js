@@ -65,7 +65,7 @@ function Visitor() {
                                 </div>
 
                                 <button type="submit" className="btn btn-premium-success w-100 py-3 d-flex justify-content-center align-items-center fs-5 transition-all outline-none">
-                                    <i className="bi bi-check2-circle me-2"></i> Approve & Generate Pass
+                                    <i className="bi bi-check2-circle me-2"></i> Authorize Visitor Clearance
                                 </button>
                             </form>
                         ) : (
@@ -73,15 +73,15 @@ function Visitor() {
                                 <div className="d-inline-flex align-items-center justify-content-center rounded-circle bg-success bg-opacity-10 mb-4" style={{ width: '80px', height: '80px' }}>
                                     <i className="bi bi-shield-check text-success" style={{ fontSize: '3rem' }}></i>
                                 </div>
-                                <h3 className="brand-font text-success mb-3">Clearance Granted</h3>
+                                <h3 className="brand-font text-success mb-3">Clearance Confirmed</h3>
 
                                 <div className="card border-0 bg-light rounded-4 p-4 text-start mb-4 mx-auto" style={{ maxWidth: '400px' }}>
                                     <div className="d-flex justify-content-between border-bottom pb-2 mb-3">
-                                        <span className="text-muted small">VISITOR</span>
+                                        <span className="text-muted small">VISITOR IDENTITY</span>
                                         <span className="fw-bold fs-5">{formData.visitorName || "Guest"}</span>
                                     </div>
                                     <div className="d-flex justify-content-between border-bottom pb-2 mb-3">
-                                        <span className="text-muted small">TYPE</span>
+                                        <span className="text-muted small">ASSOCIATION</span>
                                         <span className="fw-bold">{formData.relationship || "N/A"}</span>
                                     </div>
                                     <div className="d-flex justify-content-between align-items-center">
@@ -91,7 +91,7 @@ function Visitor() {
                                 </div>
 
                                 <button onClick={handleNewPass} className="btn btn-outline-secondary px-4 py-2 rounded-pill shadow-sm hover-bg-light transition-all">
-                                    <i className="bi bi-arrow-counterclockwise me-2"></i> Issue Another Pass
+                                    <i className="bi bi-arrow-counterclockwise me-2"></i> Issue Additional Clearance
                                 </button>
                             </div>
                         )}
