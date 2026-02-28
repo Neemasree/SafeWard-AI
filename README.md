@@ -80,4 +80,3 @@ In high-pressure hospital environments, traditional logbooks are insufficient. S
 
 ---
 
-Developed with ❤️ for the Hackathon by **Neema Sree**.
