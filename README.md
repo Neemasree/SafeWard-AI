@@ -71,12 +71,4 @@ In high-pressure hospital environments, traditional logbooks are insufficient. S
 
 ---
 
-## 📸 Presentation Script for Judges
-1.  **Safety First:** Register a caregiver and a visitor; observe the dashboard analytics updating in real-time to secure the facility.
-2.  **Night Watch:** Toggle the **Night Shift Policy**. Initiate a **Biometric Scan**—watch the AI strictly block the visitor and log a hard security event in the stream.
-3.  **Analytics:** Scroll down to the **Security Intelligence** suite to analyze the authorization breakdown and defense trajectory graphs.
-4.  **Logistics:** Demonstrate the **Log Departure Event** to prove the system maintains a 100% accurate live occupancy count.
-5.  **Crowd Control:** Simulate entries until occupancy reaches **4/4**. Attempt a final entry—the system will enforce a hard block based on capacity safety protocols.
-
----
 
