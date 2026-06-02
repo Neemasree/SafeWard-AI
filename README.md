@@ -15,7 +15,7 @@ In high-pressure hospital environments, traditional logbooks are insufficient. S
 
 ## ✨ Key Features
 
-### 🔐 1. Smart AI-Face Verification Terminal
+### 🔐 1.Smart AI-Face Verification Terminal
 *   **Context-Aware Scans:** AI logic dynamically adapts to active site policies.
 *   **Access Rejections:** Automatically blocks unauthorized individuals or violating current room policies.
 *   **Visual Feedback:** Instant UI response (Access Granted/Denied) with biometric simulation.
